@@ -1,0 +1,10 @@
+logs/
+test/fixtures/auth-aws-v4-nodejs-test/logs/
+npm-debug.log
+node_modules/
+coverage/
+.idea/
+run/
+.DS_Store
+*.swp
+

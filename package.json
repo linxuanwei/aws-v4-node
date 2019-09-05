@@ -1,0 +1,48 @@
+{
+  "name": "@dr/auth-aws-v4-nodejs",
+  "version": "1.0.1",
+  "description": "@dr/auth-aws-v4-nodejs",
+  "eggPlugin": {
+    "name": "authAwsV4Nodejs"
+  },
+  "dr": {
+    "category": [
+      "cis",
+      "nodejs"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cliff": "^0.1.10",
+    "egg": "^2.0.0",
+    "egg-bin": "^4.3.3",
+    "egg-mock": "^3.13.1",
+    "eslint": "^3.19.0",
+    "eslint-config-egg": "^5.1.1",
+    "husky": "^1.0.0-rc.9",
+    "power-assert": "^1.4.4",
+    "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "npm run fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "fix": "npm run lint -- --fix",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "i": "npm install --no-package-lock"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run fix && echo 提醒：Push Remote 之前, 请确认您已通过单元测试"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@code.dianrong.com:7999/ras/auth-aws-v4-nodejs.git"
+  },
+  "author": "the Dianrong Node Team",
+  "license": "MIT"
+}
